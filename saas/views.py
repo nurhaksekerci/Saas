@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import status, viewsets, permissions, filters
+from rest_framework import status, viewsets, permissions, filters, serializers
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAdminUser, DjangoModelPermissions
@@ -17,8 +17,12 @@ from django.views.decorators.vary import vary_on_cookie
 from django.utils.translation import gettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
 import logging
+from rest_framework.exceptions import ValidationError
 
 # Create your views here.
+
+# Logger tanımı
+logger = logging.getLogger(__name__)
 
 class LoginView(APIView):
     """
@@ -286,56 +290,82 @@ class CompanyViewSet(BaseViewSet):
     def register(self, request):
         """Token gerektirmeyen şirket kaydı"""
         try:
+            # Request verilerini logla
+            logger.info(f"Register request data: {request.data}")
+
             # Gelen veriyi doğrula
             serializer = self.get_serializer(data=request.data)
-            serializer.is_valid(raise_exception=True)
+            
+            try:
+                serializer.is_valid(raise_exception=True)
+            except ValidationError as e:
+                logger.warning(f"Validation error during registration: {e.detail}")
+                return Response({
+                    'status': 'error',
+                    'message': 'Validasyon hatası',
+                    'errors': e.detail
+                }, status=status.HTTP_400_BAD_REQUEST)
 
             # Şirketi oluştur
             company = serializer.save(is_active=True)
+            logger.info(f"Company created: {company.name}")
 
-            # Merkez şube oluştur
-            branch = Branch.objects.create(
-                company=company,
-                name=f"{company.name} Merkez Şube",
-                is_main_branch=True,
-                phone=company.phone,
-                email=company.email,
-                address=company.address,
-                neighborhood=company.neighborhood
-            )
-
-            # Deneme planı ata
             try:
-                trial_plan = Plan.objects.get(id=1)  # 30 günlük deneme planı
-                Subscription.objects.create(
+                # Merkez şube oluştur
+                branch = Branch.objects.create(
+                    company=company,
+                    name=f"{company.name} Merkez Şube",
+                    is_main_branch=True,
+                    phone=company.phone,
+                    email=company.email,
+                    address=company.address,
+                    neighborhood=company.neighborhood
+                )
+                logger.info(f"Main branch created for company: {company.name}")
+
+                # Deneme planı ata
+                trial_plan = Plan.objects.get(id=1)
+                subscription = Subscription.objects.create(
                     company=company,
                     plan=trial_plan,
                     start_date=timezone.now(),
                     end_date=timezone.now() + timedelta(days=30),
                     status='active'
                 )
-            except Plan.DoesNotExist:
-                # Deneme planı bulunamazsa hata dönme, sadece loglama yap
-                logger.error("Trial plan (id=1) not found during company registration")
+                logger.info(f"Trial subscription created for company: {company.name}")
 
-            return Response({
-                'status': 'success',
-                'message': 'Şirket başarıyla oluşturuldu',
-                'data': serializer.data
-            }, status=status.HTTP_201_CREATED)
+                return Response({
+                    'status': 'success',
+                    'message': 'Şirket başarıyla oluşturuldu',
+                    'data': {
+                        'company': serializer.data,
+                        'branch': {
+                            'id': branch.id,
+                            'name': branch.name
+                        },
+                        'subscription': {
+                            'plan': trial_plan.name,
+                            'end_date': subscription.end_date
+                        }
+                    }
+                }, status=status.HTTP_201_CREATED)
 
-        except serializers.ValidationError as e:
-            return Response({
-                'status': 'error',
-                'message': 'Validasyon hatası',
-                'errors': e.detail
-            }, status=status.HTTP_400_BAD_REQUEST)
+            except Exception as e:
+                # Hata durumunda oluşturulan şirketi sil
+                company.delete()
+                logger.error(f"Error during company registration process: {str(e)}")
+                return Response({
+                    'status': 'error',
+                    'message': 'Şirket oluşturulurken bir hata oluştu',
+                    'detail': str(e)
+                }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         except Exception as e:
-            logger.error(f"Error during company registration: {str(e)}")
+            logger.error(f"Unexpected error during registration: {str(e)}")
             return Response({
                 'status': 'error',
-                'message': 'Şirket oluşturulurken bir hata oluştu'
+                'message': 'Beklenmeyen bir hata oluştu',
+                'detail': str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class BranchViewSet(viewsets.ModelViewSet):

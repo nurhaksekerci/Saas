@@ -5,6 +5,7 @@ from django.utils import timezone
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 from datetime import timedelta
+from django.utils.translation import gettext_lazy as _
 
 def tr_slugify(text):
     """
@@ -129,7 +130,11 @@ class Company(BaseModel):
         verbose_name="Şirket Türü"
     )
     slug = models.SlugField(max_length=150, unique=True, blank=True, verbose_name="URL")
-    tax_number = models.CharField(max_length=10, unique=True, verbose_name="Vergi Numarası")
+    tax_number = models.CharField(
+        max_length=10,
+        unique=True,
+        verbose_name=_("Vergi Numarası")
+    )
     tax_office = models.CharField(max_length=50, verbose_name="Vergi Dairesi")
     phone = models.CharField(max_length=15, verbose_name="Telefon")
     email = models.EmailField(verbose_name="E-posta")
