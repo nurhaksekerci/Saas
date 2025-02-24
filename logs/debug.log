@@ -1,0 +1,1280 @@
+INFO 2025-02-24 11:02:42,818 autoreload 5792 2672 Watching for file changes with StatReloader
+ERROR 2025-02-24 11:02:44,083 log 5792 12972 Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:02:44,092 basehttp 5792 12972 "GET / HTTP/1.1" 500 137256
+ERROR 2025-02-24 11:02:44,336 log 5792 12972 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:02:44,339 basehttp 5792 12972 "GET /favicon.ico HTTP/1.1" 500 137037
+ERROR 2025-02-24 11:02:51,643 log 5792 12972 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:02:51,647 basehttp 5792 12972 "GET /admin HTTP/1.1" 500 137173
+ERROR 2025-02-24 11:02:51,763 log 5792 12972 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:02:51,766 basehttp 5792 12972 "GET /favicon.ico HTTP/1.1" 500 137042
+INFO 2025-02-24 11:03:11,285 autoreload 5792 2672 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\admin.py changed, reloading.
+INFO 2025-02-24 11:03:11,879 autoreload 2028 14660 Watching for file changes with StatReloader
+INFO 2025-02-24 11:03:50,481 autoreload 2028 14660 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\urls.py changed, reloading.
+INFO 2025-02-24 11:03:51,095 autoreload 2264 9044 Watching for file changes with StatReloader
+INFO 2025-02-24 11:04:00,334 autoreload 12160 2468 Watching for file changes with StatReloader
+INFO 2025-02-24 11:04:24,446 autoreload 12160 2468 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\admin.py changed, reloading.
+INFO 2025-02-24 11:04:25,110 autoreload 10872 8716 Watching for file changes with StatReloader
+ERROR 2025-02-24 11:04:25,874 log 10872 15644 Internal Server Error: /admin
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:04:25,879 basehttp 10872 15644 "GET /admin HTTP/1.1" 500 137310
+ERROR 2025-02-24 11:04:26,026 log 10872 15644 Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'djdt'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 102, in __call__
+    return self._postprocess(request, response, toolbar)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\middleware.py", line 143, in _postprocess
+    rendered = toolbar.render_toolbar()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\toolbar.py", line 86, in render_toolbar
+    return render_to_string("debug_toolbar/base.html", context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\test\utils.py", line 114, in instrumented_test_render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 327, in render
+    return nodelist.render(context)
+           ~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 1008, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\base.py", line 969, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\urls\base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'djdt' is not a registered namespace
+ERROR 2025-02-24 11:04:26,029 basehttp 10872 15644 "GET /favicon.ico HTTP/1.1" 500 137042
+INFO 2025-02-24 11:04:47,208 autoreload 10872 8716 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\settings.py changed, reloading.
+INFO 2025-02-24 11:04:47,845 autoreload 9804 4220 Watching for file changes with StatReloader
+INFO 2025-02-24 11:04:59,710 autoreload 15060 15732 Watching for file changes with StatReloader
+INFO 2025-02-24 11:05:17,996 autoreload 15060 15732 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\settings.py changed, reloading.
+INFO 2025-02-24 11:05:18,605 autoreload 7084 16344 Watching for file changes with StatReloader
+INFO 2025-02-24 11:05:20,102 basehttp 7084 6868 "GET /admin HTTP/1.1" 301 0
+INFO 2025-02-24 11:05:20,125 basehttp 7084 12796 "GET /admin/ HTTP/1.1" 302 0
+INFO 2025-02-24 11:05:20,228 basehttp 7084 12796 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 17356
+INFO 2025-02-24 11:05:20,259 basehttp 7084 12796 "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2025-02-24 11:05:20,263 basehttp 7084 12248 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2025-02-24 11:05:20,264 basehttp 7084 6136 "GET /static/admin/css/login.css HTTP/1.1" 200 951
+INFO 2025-02-24 11:05:20,264 basehttp 7084 8436 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-02-24 11:05:20,266 basehttp 7084 6372 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-02-24 11:05:20,266 basehttp 7084 15408 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2025-02-24 11:05:20,278 basehttp 7084 12796 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-02-24 11:05:20,290 basehttp 7084 15408 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-02-24 11:05:20,291 basehttp 7084 12248 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-02-24 11:05:20,300 basehttp 7084 12796 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-02-24 11:05:20,334 basehttp 7084 12796 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+WARNING 2025-02-24 11:05:20,368 log 7084 12796 Not Found: /favicon.ico
+WARNING 2025-02-24 11:05:20,368 basehttp 7084 12796 "GET /favicon.ico HTTP/1.1" 404 17846
+INFO 2025-02-24 11:05:28,557 basehttp 7084 12796 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2025-02-24 11:05:28,626 basehttp 7084 12796 "GET /admin/ HTTP/1.1" 200 29575
+INFO 2025-02-24 11:05:28,647 basehttp 7084 12796 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2025-02-24 11:05:28,652 basehttp 7084 15408 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-02-24 11:05:28,653 basehttp 7084 6372 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-02-24 11:05:28,653 basehttp 7084 12248 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+WARNING 2025-02-24 11:05:37,982 log 7084 6372 Not Found: /
+WARNING 2025-02-24 11:05:37,983 basehttp 7084 6372 "GET / HTTP/1.1" 404 17784
+WARNING 2025-02-24 11:05:44,321 log 7084 6372 Unauthorized: /api/v1/
+WARNING 2025-02-24 11:05:44,322 basehttp 7084 6372 "GET /api/v1/ HTTP/1.1" 401 18170
+INFO 2025-02-24 11:05:44,346 basehttp 7084 6372 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-02-24 11:05:44,347 basehttp 7084 12248 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-02-24 11:05:44,347 basehttp 7084 12796 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-02-24 11:05:44,348 basehttp 7084 15408 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-02-24 11:05:44,365 basehttp 7084 6136 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-02-24 11:05:44,376 basehttp 7084 15408 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-02-24 11:05:44,377 basehttp 7084 6372 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-02-24 11:05:44,383 basehttp 7084 6136 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-02-24 11:05:44,390 basehttp 7084 15408 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-02-24 11:05:44,393 basehttp 7084 12796 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-02-24 11:05:44,400 basehttp 7084 12248 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-02-24 11:05:44,417 basehttp 7084 8436 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+WARNING 2025-02-24 11:05:49,077 log 7084 8436 Not Found: /
+WARNING 2025-02-24 11:05:49,078 basehttp 7084 8436 "GET / HTTP/1.1" 404 17784
+INFO 2025-02-24 11:05:49,090 basehttp 7084 8436 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:05:49,090 basehttp 7084 12796 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:05:49,090 basehttp 7084 12248 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:05:49,094 basehttp 7084 12248 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-02-24 11:05:59,582 log 7084 12248 Method Not Allowed: /auth/token/
+WARNING 2025-02-24 11:05:59,582 basehttp 7084 12248 "GET /auth/token/ HTTP/1.1" 405 20810
+INFO 2025-02-24 11:06:08,897 basehttp 7084 12248 "POST /auth/token/ HTTP/1.1" 200 21245
+INFO 2025-02-24 11:10:15,956 basehttp 7084 12248 "POST /auth/token/ HTTP/1.1" 200 21245
+INFO 2025-02-24 11:10:15,971 basehttp 7084 12248 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,972 basehttp 7084 6136 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,972 basehttp 7084 12796 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,972 basehttp 7084 15408 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,972 basehttp 7084 6372 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,972 basehttp 7084 8436 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,977 basehttp 7084 12796 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,977 basehttp 7084 12248 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,977 basehttp 7084 15408 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,977 basehttp 7084 8436 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,977 basehttp 7084 6372 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,978 basehttp 7084 6136 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,980 basehttp 7084 12796 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,981 basehttp 7084 12796 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,992 basehttp 7084 12796 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:10:15,996 basehttp 7084 12796 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:14,673 basehttp 7084 12796 "POST /auth/token/ HTTP/1.1" 200 21245
+INFO 2025-02-24 11:11:14,685 basehttp 7084 12796 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:14,685 basehttp 7084 6136 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:14,697 basehttp 7084 6136 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:14,699 basehttp 7084 6136 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-02-24 11:11:24,884 log 7084 6136 Method Not Allowed: /auth/token/
+WARNING 2025-02-24 11:11:24,885 basehttp 7084 6136 "GET /auth/token/ HTTP/1.1" 405 20810
+INFO 2025-02-24 11:11:29,784 basehttp 7084 6136 "POST /auth/token/ HTTP/1.1" 200 21245
+INFO 2025-02-24 11:11:29,798 basehttp 7084 8436 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,798 basehttp 7084 6136 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,798 basehttp 7084 12248 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,798 basehttp 7084 12796 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,798 basehttp 7084 6372 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,799 basehttp 7084 15408 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,802 basehttp 7084 12248 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,802 basehttp 7084 6136 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,802 basehttp 7084 12796 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,802 basehttp 7084 8436 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:11:29,803 basehttp 7084 15408 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+WARNING 2025-02-24 11:27:27,181 log 7084 15292 Method Not Allowed: /auth/token/
+WARNING 2025-02-24 11:27:27,182 basehttp 7084 15292 "GET /auth/token/ HTTP/1.1" 405 20810
+INFO 2025-02-24 11:27:27,191 basehttp 7084 15292 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,197 basehttp 7084 15292 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,198 basehttp 7084 15948 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,198 basehttp 7084 6888 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,201 basehttp 7084 10524 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,201 basehttp 7084 2476 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,202 basehttp 7084 15292 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,202 basehttp 7084 15948 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,204 basehttp 7084 6888 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,205 basehttp 7084 12404 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,207 basehttp 7084 10524 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,207 basehttp 7084 2476 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,208 basehttp 7084 15292 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,209 basehttp 7084 6888 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,216 basehttp 7084 6888 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:27,219 basehttp 7084 6888 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:27:31,209 basehttp 7084 6888 "POST /auth/token/ HTTP/1.1" 200 21245
+INFO 2025-02-24 11:27:44,005 autoreload 9380 392 Watching for file changes with StatReloader
+WARNING 2025-02-24 11:27:45,156 log 9380 4232 Not Found: /
+WARNING 2025-02-24 11:27:45,157 basehttp 9380 4232 "GET / HTTP/1.1" 404 17784
+INFO 2025-02-24 11:27:45,181 basehttp 9380 4232 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-02-24 11:27:45,186 basehttp 9380 4232 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-02-24 11:27:45,198 basehttp 9380 4232 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-02-24 11:27:45,241 basehttp 9380 4232 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+WARNING 2025-02-24 11:27:45,290 log 9380 4232 Not Found: /favicon.ico
+WARNING 2025-02-24 11:27:45,290 basehttp 9380 4232 "GET /favicon.ico HTTP/1.1" 404 17846
+WARNING 2025-02-24 11:27:58,403 log 9380 4232 Method Not Allowed: /auth/token/
+WARNING 2025-02-24 11:27:58,403 basehttp 9380 4232 "GET /auth/token/ HTTP/1.1" 405 20810
+INFO 2025-02-24 11:27:58,416 basehttp 9380 4232 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-02-24 11:27:58,424 basehttp 9380 4232 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-02-24 11:27:58,426 basehttp 9380 14696 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-02-24 11:27:58,428 basehttp 9380 8632 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-02-24 11:27:58,428 basehttp 9380 4508 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-02-24 11:27:58,428 basehttp 9380 15784 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-02-24 11:27:58,433 basehttp 9380 4232 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-02-24 11:27:58,433 basehttp 9380 8632 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-02-24 11:27:58,433 basehttp 9380 14696 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-02-24 11:27:58,434 basehttp 9380 4508 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-02-24 11:27:58,434 basehttp 9380 15784 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-02-24 11:27:58,435 basehttp 9380 8944 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-02-24 11:28:02,999 basehttp 9380 15784 "POST /auth/token/ HTTP/1.1" 200 21245
+WARNING 2025-02-24 11:28:15,074 log 9380 15784 Not Found: /auth/
+WARNING 2025-02-24 11:28:15,074 basehttp 9380 15784 "GET /auth/ HTTP/1.1" 404 17822
+INFO 2025-02-24 11:28:30,728 basehttp 9380 15784 "GET /redoc HTTP/1.1" 301 0
+INFO 2025-02-24 11:28:30,759 basehttp 9380 8944 "GET /redoc/ HTTP/1.1" 200 14080
+INFO 2025-02-24 11:28:30,781 basehttp 9380 8944 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-02-24 11:28:30,795 basehttp 9380 8632 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+INFO 2025-02-24 11:28:30,803 basehttp 9380 4508 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-02-24 11:28:30,818 basehttp 9380 14696 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+INFO 2025-02-24 11:28:30,919 basehttp 9380 14696 "GET /redoc/?format=openapi HTTP/1.1" 200 2511
+INFO 2025-02-24 11:28:30,919 basehttp 9380 4508 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+INFO 2025-02-24 11:30:23,917 autoreload 9380 392 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\settings.py changed, reloading.
+INFO 2025-02-24 11:30:24,613 autoreload 6496 9976 Watching for file changes with StatReloader
+WARNING 2025-02-24 11:30:25,977 log 6496 13416 Method Not Allowed: /auth/token/
+WARNING 2025-02-24 11:30:25,978 basehttp 6496 13416 "GET /auth/token/ HTTP/1.1" 405 20810
+INFO 2025-02-24 11:30:30,827 basehttp 6496 13416 "POST /auth/token/ HTTP/1.1" 200 21247
+INFO 2025-02-24 11:30:30,841 basehttp 6496 15476 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:30:30,841 basehttp 6496 13416 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:30:30,844 basehttp 6496 15476 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:30:30,851 basehttp 6496 15476 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-02-24 11:30:37,290 log 6496 15476 Method Not Allowed: /auth/login/
+WARNING 2025-02-24 11:30:37,291 basehttp 6496 15476 "GET /auth/login/ HTTP/1.1" 405 20684
+INFO 2025-02-24 11:30:41,603 basehttp 6496 15476 "POST /auth/login/ HTTP/1.1" 200 22487
+INFO 2025-02-24 11:33:16,886 autoreload 6496 9976 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\serializers.py changed, reloading.
+INFO 2025-02-24 11:33:17,540 autoreload 9284 5880 Watching for file changes with StatReloader
+INFO 2025-02-24 11:33:21,214 basehttp 9284 15460 "POST /auth/login/ HTTP/1.1" 200 22487
+INFO 2025-02-24 11:33:21,231 basehttp 9284 15460 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,231 basehttp 9284 10796 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,233 basehttp 9284 9576 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,233 basehttp 9284 3244 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,237 basehttp 9284 15460 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,238 basehttp 9284 10796 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,238 basehttp 9284 10344 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,240 basehttp 9284 15460 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,240 basehttp 9284 15408 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,240 basehttp 9284 3244 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:33:21,240 basehttp 9284 9576 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:34:51,424 autoreload 9284 5880 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 11:34:52,134 autoreload 9136 3556 Watching for file changes with StatReloader
+INFO 2025-02-24 11:35:47,314 autoreload 9136 3556 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 11:35:47,927 autoreload 15488 15664 Watching for file changes with StatReloader
+INFO 2025-02-24 11:36:59,594 autoreload 15488 15664 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 11:37:00,173 autoreload 11204 15836 Watching for file changes with StatReloader
+INFO 2025-02-24 11:37:21,566 autoreload 14776 5696 Watching for file changes with StatReloader
+INFO 2025-02-24 11:37:54,961 autoreload 14776 5696 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\serializers.py changed, reloading.
+INFO 2025-02-24 11:37:55,572 autoreload 6360 12624 Watching for file changes with StatReloader
+INFO 2025-02-24 11:37:57,211 basehttp 6360 6376 "GET /redoc/ HTTP/1.1" 200 14080
+INFO 2025-02-24 11:37:57,230 basehttp 6360 6376 "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,236 basehttp 6360 6376 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,237 basehttp 6360 16160 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,239 basehttp 6360 3544 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,240 basehttp 6360 10268 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,240 basehttp 6360 11352 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,387 basehttp 6360 3544 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,387 basehttp 6360 10268 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:37:57,442 basehttp 6360 3544 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 304 0
+ERROR 2025-02-24 11:37:57,465 log 6360 11352 Internal Server Error: /redoc/
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        self.field_inspectors, 'get_schema', serializer, {'field_inspectors': self.field_inspectors}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 42, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        self.field_inspectors, 'field_to_swagger_object', field, {'field_inspectors': self.field_inspectors},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        swagger_object_type=swagger_object_type, use_references=use_references, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 133, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\openapi.py", line 685, in setdefault
+    ret = maker()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 102, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `config` is not valid for model `Integration` in `saas.serializers.IntegrationSerializer`.
+ERROR 2025-02-24 11:37:57,527 basehttp 6360 11352 "GET /redoc/?format=openapi HTTP/1.1" 500 239582
+INFO 2025-02-24 11:38:10,894 autoreload 15440 3900 Watching for file changes with StatReloader
+INFO 2025-02-24 11:38:14,227 basehttp 15440 2136 "GET /redoc/ HTTP/1.1" 200 14080
+INFO 2025-02-24 11:38:14,236 basehttp 15440 2136 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-02-24 11:38:14,242 basehttp 15440 10100 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+INFO 2025-02-24 11:38:14,242 basehttp 15440 2136 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-02-24 11:38:14,244 basehttp 15440 11620 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-02-24 11:38:14,244 basehttp 15440 5284 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-02-24 11:38:14,249 basehttp 15440 15112 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+INFO 2025-02-24 11:38:14,366 basehttp 15440 11620 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-02-24 11:38:14,366 basehttp 15440 5284 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+INFO 2025-02-24 11:38:14,418 basehttp 15440 5284 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+ERROR 2025-02-24 11:38:14,439 log 15440 15112 Internal Server Error: /redoc/
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+                    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        self.field_inspectors, 'get_schema', serializer, {'field_inspectors': self.field_inspectors}
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 42, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+           ~~~~~~~~~~~~~~~~~~~~~^
+        self.field_inspectors, 'field_to_swagger_object', field, {'field_inspectors': self.field_inspectors},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        swagger_object_type=swagger_object_type, use_references=use_references, **kwargs
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 133, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\openapi.py", line 685, in setdefault
+    ret = maker()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\drf_yasg\inspectors\field.py", line 102, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+                                ^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+                      ~~~~~~~~~~~~~~~^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1103, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ~~~~~~~~~~~~~~~~^
+        source, info, model, depth
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1249, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\serializers.py", line 1367, in build_unknown_field
+    raise ImproperlyConfigured(
+    ...<2 lines>...
+    )
+django.core.exceptions.ImproperlyConfigured: Field name `config` is not valid for model `Integration` in `saas.serializers.IntegrationSerializer`.
+ERROR 2025-02-24 11:38:14,504 basehttp 15440 15112 "GET /redoc/?format=openapi HTTP/1.1" 500 239847
+INFO 2025-02-24 11:38:51,866 autoreload 15440 3900 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\settings.py changed, reloading.
+INFO 2025-02-24 11:38:52,509 autoreload 15292 1864 Watching for file changes with StatReloader
+INFO 2025-02-24 11:39:05,390 basehttp 15292 4240 "GET /redoc/ HTTP/1.1" 200 14082
+INFO 2025-02-24 11:39:05,458 basehttp 15292 4240 "GET /redoc/?format=openapi HTTP/1.1" 200 949
+INFO 2025-02-24 11:39:21,886 basehttp 15292 4240 "GET /redoc/ HTTP/1.1" 200 14081
+INFO 2025-02-24 11:39:21,896 basehttp 15292 4240 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-02-24 11:39:21,902 basehttp 15292 14492 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+INFO 2025-02-24 11:39:21,903 basehttp 15292 4240 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-02-24 11:39:21,904 basehttp 15292 1836 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-02-24 11:39:21,905 basehttp 15292 11832 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-02-24 11:39:21,910 basehttp 15292 4204 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+INFO 2025-02-24 11:39:21,970 basehttp 15292 11832 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-02-24 11:39:21,970 basehttp 15292 1836 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+INFO 2025-02-24 11:39:21,983 basehttp 15292 4204 "GET /redoc/?format=openapi HTTP/1.1" 200 949
+INFO 2025-02-24 11:39:21,984 basehttp 15292 11832 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+INFO 2025-02-24 11:40:05,523 autoreload 15292 1864 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\urls.py changed, reloading.
+INFO 2025-02-24 11:40:06,181 autoreload 11008 11716 Watching for file changes with StatReloader
+INFO 2025-02-24 11:40:30,408 autoreload 11008 11716 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 11:40:30,953 autoreload 14596 7928 Watching for file changes with StatReloader
+INFO 2025-02-24 11:40:42,765 autoreload 14596 7928 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 11:40:43,354 autoreload 6372 7484 Watching for file changes with StatReloader
+INFO 2025-02-24 11:40:45,727 basehttp 6372 8784 "GET /redoc/ HTTP/1.1" 200 14082
+INFO 2025-02-24 11:40:45,804 basehttp 6372 8784 "GET /redoc/?format=openapi HTTP/1.1" 200 3339
+INFO 2025-02-24 11:42:39,725 autoreload 6372 7484 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\models.py changed, reloading.
+INFO 2025-02-24 11:42:40,322 autoreload 7640 14688 Watching for file changes with StatReloader
+INFO 2025-02-24 11:42:57,314 autoreload 15436 6180 Watching for file changes with StatReloader
+INFO 2025-02-24 11:49:46,593 basehttp 15436 8008 "GET /api/v1/companies/ HTTP/1.1" 200 52
+WARNING 2025-02-24 11:49:57,175 log 15436 8008 Bad Request: /api/v1/companies/
+WARNING 2025-02-24 11:49:57,176 basehttp 15436 8008 "POST /api/v1/companies/ HTTP/1.1" 400 59
+INFO 2025-02-24 11:54:59,031 autoreload 4468 5284 Watching for file changes with StatReloader
+INFO 2025-02-24 11:55:03,030 basehttp 4468 15724 "GET /admin/saas/city/ HTTP/1.1" 200 40523
+INFO 2025-02-24 11:55:03,052 basehttp 4468 15724 "GET /static/admin/css/base.css HTTP/1.1" 200 22092
+INFO 2025-02-24 11:55:03,052 basehttp 4468 9572 "GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+INFO 2025-02-24 11:55:03,060 basehttp 4468 3832 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+INFO 2025-02-24 11:55:03,061 basehttp 4468 16980 "GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+INFO 2025-02-24 11:55:03,061 basehttp 4468 9572 "GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+INFO 2025-02-24 11:55:03,073 basehttp 4468 3228 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+INFO 2025-02-24 11:55:03,082 basehttp 4468 16980 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2025-02-24 11:55:03,097 basehttp 4468 9572 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+INFO 2025-02-24 11:55:03,098 basehttp 4468 3832 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2025-02-24 11:55:03,103 basehttp 4468 16980 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2025-02-24 11:55:03,105 basehttp 4468 3228 "GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+INFO 2025-02-24 11:55:03,105 basehttp 4468 16980 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 11:55:03,117 basehttp 4468 3228 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-02-24 11:55:03,117 basehttp 4468 16980 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2025-02-24 11:55:03,117 basehttp 4468 9572 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2025-02-24 11:55:03,120 basehttp 4468 9572 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:55:03,129 basehttp 4468 17004 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:55:03,136 basehttp 4468 15724 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2025-02-24 11:55:03,141 basehttp 4468 15724 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+INFO 2025-02-24 11:55:03,159 basehttp 4468 15724 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2025-02-24 11:55:03,194 basehttp 4468 3832 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2025-02-24 11:55:03,208 basehttp 4468 3832 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 11:55:03,218 basehttp 4468 3832 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-02-24 11:55:03,219 basehttp 4468 9572 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-02-24 11:55:03,226 basehttp 4468 15724 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2025-02-24 11:55:03,227 basehttp 4468 17004 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+INFO 2025-02-24 11:55:03,262 basehttp 4468 17004 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+WARNING 2025-02-24 11:55:03,299 log 4468 17004 Not Found: /favicon.ico
+WARNING 2025-02-24 11:55:03,300 basehttp 4468 17004 "GET /favicon.ico HTTP/1.1" 404 17834
+INFO 2025-02-24 11:55:07,369 basehttp 4468 17004 "GET /admin/saas/district/ HTTP/1.1" 200 46663
+INFO 2025-02-24 11:55:07,396 basehttp 4468 17004 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:55:13,382 basehttp 4468 17004 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 128621
+INFO 2025-02-24 11:55:13,421 basehttp 4468 17004 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:55:25,354 basehttp 4468 17004 "GET /admin/saas/neighborhood/73815/change/ HTTP/1.1" 200 34743
+INFO 2025-02-24 11:55:25,377 basehttp 4468 17004 "GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+INFO 2025-02-24 11:55:25,381 basehttp 4468 9572 "GET /static/admin/css/autocomplete.css HTTP/1.1" 200 9185
+INFO 2025-02-24 11:55:25,381 basehttp 4468 15724 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 200 17358
+INFO 2025-02-24 11:55:25,394 basehttp 4468 16980 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:55:25,394 basehttp 4468 3228 "GET /static/admin/js/vendor/select2/i18n/tr.js HTTP/1.1" 200 775
+INFO 2025-02-24 11:55:25,394 basehttp 4468 9572 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+INFO 2025-02-24 11:55:25,398 basehttp 4468 15724 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-02-24 11:55:25,398 basehttp 4468 17004 "GET /static/admin/js/autocomplete.js HTTP/1.1" 200 1060
+INFO 2025-02-24 11:55:25,401 basehttp 4468 17004 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-02-24 11:55:25,415 basehttp 4468 17004 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-02-24 11:55:25,443 basehttp 4468 3832 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 200 173566
+INFO 2025-02-24 11:55:33,425 basehttp 4468 3832 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 128621
+INFO 2025-02-24 11:57:47,576 autoreload 16900 17300 Watching for file changes with StatReloader
+INFO 2025-02-24 11:57:51,100 basehttp 16900 15704 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 128621
+INFO 2025-02-24 11:57:51,153 basehttp 16900 15704 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:57:53,434 basehttp 16900 15704 "GET /admin/saas/neighborhood/73815/change/ HTTP/1.1" 200 34742
+INFO 2025-02-24 11:57:53,468 basehttp 16900 15704 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 11:57:56,455 basehttp 16900 15704 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 128621
+INFO 2025-02-24 12:01:22,731 autoreload 5416 16512 Watching for file changes with StatReloader
+INFO 2025-02-24 12:01:48,271 basehttp 5416 17224 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 129697
+INFO 2025-02-24 12:01:48,288 basehttp 5416 2948 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:01:48,289 basehttp 5416 16692 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:01:48,310 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:01:48,351 basehttp 5416 17224 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:01:48,375 basehttp 5416 17224 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:01:57,222 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=2 HTTP/1.1" 200 130496
+INFO 2025-02-24 12:01:57,256 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:00,933 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=3 HTTP/1.1" 200 130349
+INFO 2025-02-24 12:02:00,967 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:04,915 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=4 HTTP/1.1" 200 130454
+INFO 2025-02-24 12:02:04,950 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:09,185 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=5 HTTP/1.1" 200 130481
+INFO 2025-02-24 12:02:09,218 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:14,203 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=6 HTTP/1.1" 200 130575
+INFO 2025-02-24 12:02:14,238 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:17,816 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=7 HTTP/1.1" 200 130555
+INFO 2025-02-24 12:02:17,855 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:21,647 basehttp 5416 17224 "GET /admin/saas/neighborhood/?p=1 HTTP/1.1" 200 130377
+INFO 2025-02-24 12:02:21,680 basehttp 5416 17224 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:02:25,627 basehttp 5416 15048 "GET /api/v1/cities/ HTTP/1.1" 200 1608
+INFO 2025-02-24 12:02:42,787 basehttp 5416 15048 "GET /api/v1/districts/ HTTP/1.1" 200 1854
+INFO 2025-02-24 12:02:51,686 basehttp 5416 15048 "GET /api/v1/neighborhoods/ HTTP/1.1" 200 2543
+ERROR 2025-02-24 12:04:17,877 log 5416 9140 Internal Server Error: /api/v1/companies/
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py", line 87, in perform_create
+    AuditLog.objects.create(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        user=self.request.user,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        changes=serializer.data
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\base.py", line 567, in __init__
+    raise TypeError(
+    ...<2 lines>...
+    )
+TypeError: AuditLog() got unexpected keyword arguments: 'content_object'
+ERROR 2025-02-24 12:04:17,949 basehttp 5416 9140 "POST /api/v1/companies/ HTTP/1.1" 500 137025
+INFO 2025-02-24 12:04:55,075 autoreload 5416 16512 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 12:04:56,030 autoreload 1836 9380 Watching for file changes with StatReloader
+WARNING 2025-02-24 12:04:57,328 log 1836 16940 Bad Request: /api/v1/companies/
+WARNING 2025-02-24 12:04:57,328 basehttp 1836 16940 "POST /api/v1/companies/ HTTP/1.1" 400 74
+WARNING 2025-02-24 12:05:07,762 log 1836 16940 Bad Request: /api/v1/companies/
+WARNING 2025-02-24 12:05:07,763 basehttp 1836 16940 "POST /api/v1/companies/ HTTP/1.1" 400 94
+INFO 2025-02-24 12:05:12,657 basehttp 1836 16940 "POST /api/v1/companies/ HTTP/1.1" 201 451
+INFO 2025-02-24 12:05:15,936 basehttp 1836 16940 "GET /api/v1/companies/ HTTP/1.1" 200 953
+INFO 2025-02-24 12:06:16,612 autoreload 1836 9380 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\serializers.py changed, reloading.
+INFO 2025-02-24 12:06:17,252 autoreload 8056 14420 Watching for file changes with StatReloader
+INFO 2025-02-24 12:06:25,476 basehttp 8056 15712 "GET /api/v1/companies/ HTTP/1.1" 200 1211
+INFO 2025-02-24 12:07:39,316 autoreload 8056 14420 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\serializers.py changed, reloading.
+INFO 2025-02-24 12:07:39,967 autoreload 10320 10344 Watching for file changes with StatReloader
+INFO 2025-02-24 12:07:44,181 basehttp 10320 6384 "GET /api/v1/companies/ HTTP/1.1" 200 1331
+WARNING 2025-02-24 12:14:42,524 log 10320 7844 Bad Request: /auth/login/
+WARNING 2025-02-24 12:14:42,524 basehttp 10320 7844 "POST /auth/login/ HTTP/1.1" 400 64
+INFO 2025-02-24 12:14:54,238 basehttp 10320 7844 "POST /auth/login/ HTTP/1.1" 200 1057
+ERROR 2025-02-24 12:19:43,189 log 10320 6692 Internal Server Error: /api/v1/companies/1/statistics/
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 357, in connect
+    sock = self.retry.call_with_retry(
+        lambda: self._connect(), lambda error: self.disconnect(error)
+    )
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\retry.py", line 62, in call_with_retry
+    return do()
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 358, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ~~~~~~~~~~~~~^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 730, in _connect
+    raise err
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 718, in _connect
+    sock.connect(socket_address)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+ConnectionRefusedError: [WinError 10061] Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\decorators.py", line 181, in _view_wrapper
+    result = _pre_process_request(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\decorators.py", line 127, in _pre_process_request
+    result = middleware.process_request(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\middleware\cache.py", line 161, in process_request
+    cache_key = get_cache_key(request, self.key_prefix, "GET", cache=self.cache)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\utils\cache.py", line 392, in get_cache_key
+    headerlist = cache.get(cache_key)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 42, in wrapper
+    return panel._record_call(cache, name, original_method, args, kwargs)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\panels\cache.py", line 151, in _record_call
+    value = original_method(*args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\cache\backends\redis.py", line 187, in get
+    return self._cache.get(key, default)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\cache\backends\redis.py", line 99, in get
+    value = client.get(key)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\commands\core.py", line 1822, in get
+    return self.execute_command("GET", name, keys=[name])
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\client.py", line 559, in execute_command
+    return self._execute_command(*args, **options)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\client.py", line 565, in _execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 1422, in get_connection
+    connection.connect()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\redis\connection.py", line 363, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to 127.0.0.1:6379. Hedef makine etkin olarak reddettiðinden baðlantý kurulamadý.
+ERROR 2025-02-24 12:19:43,242 basehttp 10320 6692 "GET /api/v1/companies/1/statistics/ HTTP/1.1" 500 196211
+INFO 2025-02-24 12:19:48,850 basehttp 10320 6692 "GET /api/v1/companies/1/ HTTP/1.1" 200 638
+INFO 2025-02-24 12:20:55,962 autoreload 14776 4996 Watching for file changes with StatReloader
+INFO 2025-02-24 12:20:57,757 autoreload 14776 4996 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 12:20:58,397 autoreload 356 15800 Watching for file changes with StatReloader
+INFO 2025-02-24 12:21:01,568 basehttp 356 4048 "GET /api/v1/companies/1/statistics/ HTTP/1.1" 200 236
+INFO 2025-02-24 12:21:23,385 basehttp 356 4048 "GET /api/v1/branches/ HTTP/1.1" 200 873
+INFO 2025-02-24 12:21:32,897 basehttp 356 4048 "GET /api/v1/employees/ HTTP/1.1" 200 52
+INFO 2025-02-24 12:21:37,332 basehttp 356 4048 "GET /api/v1/employees/statistics/ HTTP/1.1" 200 104
+ERROR 2025-02-24 12:21:50,320 log 356 4048 Internal Server Error: /api/v1/employees/
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+sqlite3.IntegrityError: NOT NULL constraint failed: saas_auditlog.company_id
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py", line 83, in perform_create
+    AuditLog.objects.create(
+    ~~~~~~~~~~~~~~~~~~~~~~~^
+        user=self.request.user,
+        ^^^^^^^^^^^^^^^^^^^^^^^
+    ...<5 lines>...
+        company=instance if isinstance(instance, Company) else getattr(instance, 'company', None)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\base.py", line 892, in save
+    self.save_base(
+    ~~~~~~~~~~~~~~^
+        using=using,
+        ^^^^^^^^^^^^
+    ...<2 lines>...
+        update_fields=update_fields,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\base.py", line 998, in save_base
+    updated = self._save_table(
+        raw,
+    ...<4 lines>...
+        update_fields,
+    )
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\base.py", line 1161, in _save_table
+    results = self._do_insert(
+        cls._base_manager, using, fields, returning_fields, raw
+    )
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\base.py", line 1202, in _do_insert
+    return manager._insert(
+           ~~~~~~~~~~~~~~~^
+        [self],
+        ^^^^^^^
+    ...<3 lines>...
+        raw=raw,
+        ^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\models\sql\compiler.py", line 1836, in execute_sql
+    cursor.execute(sql, params)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 235, in execute
+    return self._record(super().execute, sql, params)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\debug_toolbar\panels\sql\tracking.py", line 160, in _record
+    return method(sql, params)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sql, params, many=False, executor=self._execute
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\nurha\OneDrive\Masaüstü\Saas\venv\Lib\site-packages\django\db\backends\sqlite3\base.py", line 354, in execute
+    return super().execute(query, params)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: NOT NULL constraint failed: saas_auditlog.company_id
+ERROR 2025-02-24 12:21:50,417 basehttp 356 4048 "POST /api/v1/employees/ HTTP/1.1" 500 253415
+WARNING 2025-02-24 12:22:26,907 log 356 4048 Bad Request: /api/v1/employees/
+WARNING 2025-02-24 12:22:26,908 basehttp 356 4048 "POST /api/v1/employees/ HTTP/1.1" 400 145
+WARNING 2025-02-24 12:22:37,697 log 356 4048 Bad Request: /api/v1/employees/
+WARNING 2025-02-24 12:22:37,697 basehttp 356 4048 "POST /api/v1/employees/ HTTP/1.1" 400 67
+INFO 2025-02-24 12:22:54,281 basehttp 356 4048 "GET /api/v1/employees/statistics/ HTTP/1.1" 200 165
+INFO 2025-02-24 12:23:58,825 basehttp 356 14096 "GET /admin/saas/plan/ HTTP/1.1" 200 28962
+INFO 2025-02-24 12:23:58,844 basehttp 356 16892 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,844 basehttp 356 14096 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,845 basehttp 356 6544 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,846 basehttp 356 16804 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,849 basehttp 356 17252 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,850 basehttp 356 16892 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,851 basehttp 356 14096 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,851 basehttp 356 17252 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,851 basehttp 356 6544 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,852 basehttp 356 16892 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,852 basehttp 356 16804 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,855 basehttp 356 14096 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,855 basehttp 356 17252 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,857 basehttp 356 6544 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,858 basehttp 356 16804 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,858 basehttp 356 16892 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,859 basehttp 356 14096 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,861 basehttp 356 14096 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,866 basehttp 356 14096 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,877 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:23:58,888 basehttp 356 8584 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,890 basehttp 356 8584 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,890 basehttp 356 16892 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,890 basehttp 356 14096 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:23:58,894 basehttp 356 14096 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:00,531 basehttp 356 14096 "GET /admin/saas/plan/add/ HTTP/1.1" 200 36202
+INFO 2025-02-24 12:24:00,542 basehttp 356 14096 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:00,547 basehttp 356 16892 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:00,547 basehttp 356 8584 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:00,550 basehttp 356 8584 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:00,564 basehttp 356 14096 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:24:00,565 basehttp 356 8584 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-02-24 12:24:00,568 basehttp 356 8584 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:24:16,909 basehttp 356 8584 "GET /admin/saas/currency/add/?_to_field=id&_popup=1 HTTP/1.1" 200 20466
+INFO 2025-02-24 12:24:16,934 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:24:21,797 basehttp 356 8584 "POST /admin/saas/currency/add/?_to_field=id&_popup=1 HTTP/1.1" 200 13562
+INFO 2025-02-24 12:24:21,818 basehttp 356 8584 "GET /static/admin/js/popup_response.js HTTP/1.1" 200 532
+INFO 2025-02-24 12:24:34,251 basehttp 356 8584 "POST /admin/saas/plan/add/ HTTP/1.1" 200 36467
+INFO 2025-02-24 12:24:34,278 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:24:59,261 basehttp 356 8584 "POST /admin/saas/plan/add/ HTTP/1.1" 200 36511
+INFO 2025-02-24 12:24:59,291 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:25:39,891 basehttp 356 8584 "POST /admin/saas/plan/add/ HTTP/1.1" 302 0
+INFO 2025-02-24 12:25:39,939 basehttp 356 8584 "GET /admin/saas/plan/ HTTP/1.1" 200 31423
+INFO 2025-02-24 12:25:39,953 basehttp 356 14096 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:25:39,967 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:25:48,045 basehttp 356 8584 "GET /admin/saas/subscription/ HTTP/1.1" 200 29537
+INFO 2025-02-24 12:25:48,071 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:25:49,543 basehttp 356 8584 "GET /admin/saas/subscription/add/ HTTP/1.1" 200 41047
+INFO 2025-02-24 12:25:49,572 basehttp 356 8584 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:25:49,580 basehttp 356 16892 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-02-24 12:25:49,581 basehttp 356 14096 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-02-24 12:25:49,582 basehttp 356 16804 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2025-02-24 12:25:49,617 basehttp 356 16804 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-02-24 12:25:49,617 basehttp 356 14096 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-02-24 12:26:13,957 basehttp 356 14096 "POST /admin/saas/subscription/add/ HTTP/1.1" 302 0
+INFO 2025-02-24 12:26:14,003 basehttp 356 14096 "GET /admin/saas/subscription/ HTTP/1.1" 200 32540
+INFO 2025-02-24 12:26:14,031 basehttp 356 14096 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:26:14,042 basehttp 356 14096 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2025-02-24 12:27:47,069 autoreload 356 15800 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\models.py changed, reloading.
+INFO 2025-02-24 12:27:47,802 autoreload 16628 17308 Watching for file changes with StatReloader
+INFO 2025-02-24 12:28:37,588 autoreload 3804 17292 Watching for file changes with StatReloader
+INFO 2025-02-24 12:29:55,941 autoreload 5236 17372 Watching for file changes with StatReloader
+INFO 2025-02-24 12:30:00,700 basehttp 5236 11936 "GET /admin/saas/subscription/ HTTP/1.1" 200 32323
+INFO 2025-02-24 12:30:00,730 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:02,355 basehttp 5236 11936 "GET /admin/saas/subscription/ HTTP/1.1" 200 32322
+INFO 2025-02-24 12:30:02,381 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:03,654 basehttp 5236 11936 "GET /admin/saas/notification/ HTTP/1.1" 200 30054
+INFO 2025-02-24 12:30:03,682 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:04,353 basehttp 5236 11936 "GET /admin/saas/filestorage/ HTTP/1.1" 200 29452
+INFO 2025-02-24 12:30:04,381 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:04,900 basehttp 5236 11936 "GET /admin/saas/announcement/ HTTP/1.1" 200 29826
+INFO 2025-02-24 12:30:04,927 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:05,568 basehttp 5236 11936 "GET /admin/saas/integration/ HTTP/1.1" 200 29691
+INFO 2025-02-24 12:30:05,597 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:06,206 basehttp 5236 11936 "GET /admin/saas/invoice/ HTTP/1.1" 200 29505
+INFO 2025-02-24 12:30:06,241 basehttp 5236 11936 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:08,738 basehttp 5236 11936 - Broken pipe from ('127.0.0.1', 55797)
+INFO 2025-02-24 12:30:10,584 basehttp 5236 12248 "GET /admin/saas/neighborhood/ HTTP/1.1" 200 129697
+INFO 2025-02-24 12:30:10,622 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:11,256 basehttp 5236 12248 "GET /admin/saas/currency/ HTTP/1.1" 200 31328
+INFO 2025-02-24 12:30:11,285 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:12,317 basehttp 5236 12248 "GET /admin/saas/plan/ HTTP/1.1" 200 31225
+INFO 2025-02-24 12:30:12,350 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:14,778 basehttp 5236 12248 "GET /admin/saas/employee/ HTTP/1.1" 200 32991
+INFO 2025-02-24 12:30:14,810 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:18,386 basehttp 5236 12248 "GET /admin/saas/employee/1/change/ HTTP/1.1" 200 43930
+INFO 2025-02-24 12:30:18,399 basehttp 5236 8064 "GET /static/admin/css/vendor/select2/select2.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:30:18,400 basehttp 5236 15452 "GET /static/admin/css/autocomplete.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:30:18,400 basehttp 5236 3676 "GET /static/admin/js/vendor/select2/select2.full.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:30:18,402 basehttp 5236 16620 "GET /static/admin/js/vendor/select2/i18n/tr.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:30:18,404 basehttp 5236 14100 "GET /static/admin/js/autocomplete.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:30:18,419 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:23,868 basehttp 5236 12248 "GET /admin/saas/employee/ HTTP/1.1" 200 32991
+INFO 2025-02-24 12:30:26,159 basehttp 5236 12248 "GET /admin/saas/city/ HTTP/1.1" 200 40522
+INFO 2025-02-24 12:30:26,190 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:27,147 basehttp 5236 12248 "GET /admin/saas/district/ HTTP/1.1" 200 46663
+INFO 2025-02-24 12:30:27,177 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:27,714 basehttp 5236 12248 "GET /admin/saas/auditlog/ HTTP/1.1" 200 32903
+INFO 2025-02-24 12:30:31,007 basehttp 5236 12248 "GET /admin/saas/companybranding/ HTTP/1.1" 200 29073
+INFO 2025-02-24 12:30:31,034 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:34,697 basehttp 5236 12248 "GET /admin/saas/company/ HTTP/1.1" 200 33757
+INFO 2025-02-24 12:30:34,724 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:36,178 basehttp 5236 12248 "GET /admin/saas/branch/ HTTP/1.1" 200 33370
+INFO 2025-02-24 12:30:36,206 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:37,647 basehttp 5236 12248 "GET /admin/saas/companybranding/ HTTP/1.1" 200 29073
+INFO 2025-02-24 12:30:37,677 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:38,800 basehttp 5236 12248 "GET /admin/saas/companybranding/add/ HTTP/1.1" 200 35397
+INFO 2025-02-24 12:30:38,828 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:52,238 basehttp 5236 12248 "POST /admin/saas/companybranding/add/ HTTP/1.1" 302 0
+INFO 2025-02-24 12:30:52,291 basehttp 5236 12248 "GET /admin/saas/companybranding/ HTTP/1.1" 200 31505
+INFO 2025-02-24 12:30:52,323 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:30:55,446 basehttp 5236 12248 "GET /admin/saas/company/ HTTP/1.1" 200 33757
+INFO 2025-02-24 12:30:55,474 basehttp 5236 12248 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:31:17,437 basehttp 5236 14100 "GET /admin/saas/company/ HTTP/1.1" 200 33759
+INFO 2025-02-24 12:31:17,582 basehttp 5236 14100 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:31:21,809 basehttp 5236 16620 "POST /admin/saas/company/ HTTP/1.1" 200 27401
+INFO 2025-02-24 12:31:21,858 basehttp 5236 16620 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-02-24 12:31:24,612 basehttp 5236 16620 "GET /admin/saas/company/ HTTP/1.1" 200 33759
+INFO 2025-02-24 12:31:29,334 basehttp 5236 16620 "GET /admin/saas/company/ HTTP/1.1" 200 33759
+INFO 2025-02-24 12:31:29,461 basehttp 5236 16620 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:31:32,046 basehttp 5236 16620 "POST /admin/saas/company/ HTTP/1.1" 200 27401
+INFO 2025-02-24 12:31:34,786 basehttp 5236 16620 "GET /admin/saas/company/ HTTP/1.1" 200 33759
+INFO 2025-02-24 12:32:11,692 basehttp 5236 3676 "GET /admin/saas/branch/ HTTP/1.1" 200 33372
+INFO 2025-02-24 12:32:11,840 basehttp 5236 3676 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:33:00,247 autoreload 5236 17372 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\admin.py changed, reloading.
+INFO 2025-02-24 12:33:03,905 autoreload 8716 16684 Watching for file changes with StatReloader
+INFO 2025-02-24 12:33:32,540 autoreload 8716 16684 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\admin.py changed, reloading.
+INFO 2025-02-24 12:33:33,260 autoreload 932 16360 Watching for file changes with StatReloader
+INFO 2025-02-24 12:33:34,492 basehttp 932 15780 "GET /admin/saas/branch/ HTTP/1.1" 200 34713
+INFO 2025-02-24 12:33:34,522 basehttp 932 15512 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:33:34,527 basehttp 932 15512 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:33:34,542 basehttp 932 15780 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:33:34,554 basehttp 932 15780 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:33:34,603 basehttp 932 15780 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:33:52,568 basehttp 932 15512 "GET /admin/saas/company/ HTTP/1.1" 200 34279
+INFO 2025-02-24 12:33:54,224 basehttp 932 15512 "GET /admin/saas/company/ HTTP/1.1" 200 34280
+INFO 2025-02-24 12:33:54,348 basehttp 932 15512 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:33:59,488 basehttp 932 16620 "GET /admin/saas/companybranding/ HTTP/1.1" 200 31700
+INFO 2025-02-24 12:34:00,596 basehttp 932 16620 "GET /admin/saas/company/ HTTP/1.1" 200 34280
+INFO 2025-02-24 12:34:11,841 basehttp 932 16620 "GET /admin/saas/companybranding/ HTTP/1.1" 200 31700
+INFO 2025-02-24 12:34:11,967 basehttp 932 16620 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:34:13,750 basehttp 932 16620 "GET /admin/saas/companybranding/1/change/ HTTP/1.1" 200 37824
+INFO 2025-02-24 12:34:13,871 basehttp 932 16620 "GET /admin/jsi18n/ HTTP/1.1" 200 8722
+INFO 2025-02-24 12:34:14,659 basehttp 932 16620 "GET /admin/saas/companybranding/ HTTP/1.1" 200 31700
+INFO 2025-02-24 12:34:50,381 basehttp 932 16620 "GET /redoc/ HTTP/1.1" 200 14082
+INFO 2025-02-24 12:34:50,399 basehttp 932 16816 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,399 basehttp 932 16620 "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,400 basehttp 932 11452 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,402 basehttp 932 15148 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,404 basehttp 932 1904 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,498 basehttp 932 15148 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:34:50,582 basehttp 932 1904 "GET /redoc/?format=openapi HTTP/1.1" 200 3339
+INFO 2025-02-24 12:35:40,629 autoreload 932 16360 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 12:35:44,605 autoreload 6988 11476 Watching for file changes with StatReloader
+INFO 2025-02-24 12:35:45,245 basehttp 6988 8104 "GET /redoc/ HTTP/1.1" 200 14082
+INFO 2025-02-24 12:35:45,311 basehttp 6988 17392 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 304 0
+INFO 2025-02-24 12:35:45,320 basehttp 6988 8104 "GET /redoc/?format=openapi HTTP/1.1" 200 3471
+WARNING 2025-02-24 12:35:46,327 log 6988 8104 Not Found: /docs/
+WARNING 2025-02-24 12:35:46,328 basehttp 6988 8104 "GET /docs/ HTTP/1.1" 404 17810
+WARNING 2025-02-24 12:35:52,764 log 6988 8104 Not Found: /api/docs/
+WARNING 2025-02-24 12:35:52,765 basehttp 6988 8104 "GET /api/docs/ HTTP/1.1" 404 17826
+WARNING 2025-02-24 12:36:01,951 log 6988 16980 Not Found: /api/docs/
+WARNING 2025-02-24 12:36:01,952 basehttp 6988 16980 "GET /api/docs/ HTTP/1.1" 404 17826
+INFO 2025-02-24 12:36:01,968 basehttp 6988 16980 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 200 21178
+INFO 2025-02-24 12:36:01,971 basehttp 6988 16980 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 200 14601
+INFO 2025-02-24 12:36:01,978 basehttp 6988 16980 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 200 43
+INFO 2025-02-24 12:36:01,999 basehttp 6988 16980 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 200 4742
+WARNING 2025-02-24 12:36:02,039 log 6988 16980 Not Found: /favicon.ico
+WARNING 2025-02-24 12:36:02,039 basehttp 6988 16980 "GET /favicon.ico HTTP/1.1" 404 17834
+WARNING 2025-02-24 12:36:09,401 log 6988 16980 Not Found: /api/v1/docs/
+WARNING 2025-02-24 12:36:09,401 basehttp 6988 16980 "GET /api/v1/docs/ HTTP/1.1" 404 51532
+WARNING 2025-02-24 12:36:21,230 log 6988 16980 Unauthorized: /api/v1/
+WARNING 2025-02-24 12:36:21,231 basehttp 6988 16980 "GET /api/v1/ HTTP/1.1" 401 18170
+INFO 2025-02-24 12:36:21,242 basehttp 6988 16980 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+INFO 2025-02-24 12:36:21,247 basehttp 6988 3892 "GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+INFO 2025-02-24 12:36:21,247 basehttp 6988 6084 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+INFO 2025-02-24 12:36:21,247 basehttp 6988 16980 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+INFO 2025-02-24 12:36:21,250 basehttp 6988 16980 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+INFO 2025-02-24 12:36:21,250 basehttp 6988 6084 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+INFO 2025-02-24 12:36:21,251 basehttp 6988 3892 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+INFO 2025-02-24 12:36:21,254 basehttp 6988 3892 "GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+INFO 2025-02-24 12:36:21,254 basehttp 6988 6084 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+INFO 2025-02-24 12:36:21,255 basehttp 6988 16980 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+INFO 2025-02-24 12:36:21,257 basehttp 6988 3892 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+INFO 2025-02-24 12:36:21,257 basehttp 6988 6084 "GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+INFO 2025-02-24 12:36:26,822 basehttp 6988 6084 "GET /redoc/ HTTP/1.1" 200 14081
+INFO 2025-02-24 12:36:26,836 basehttp 6988 6084 "GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+INFO 2025-02-24 12:36:26,837 basehttp 6988 3892 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+INFO 2025-02-24 12:36:26,837 basehttp 6988 16980 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+INFO 2025-02-24 12:36:26,842 basehttp 6988 16836 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+INFO 2025-02-24 12:36:26,936 basehttp 6988 16980 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+INFO 2025-02-24 12:36:26,943 basehttp 6988 16836 "GET /redoc/?format=openapi HTTP/1.1" 200 3471
+INFO 2025-02-24 12:39:35,255 autoreload 6988 11476 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 12:39:35,917 autoreload 7912 7956 Watching for file changes with StatReloader
+INFO 2025-02-24 12:39:53,068 basehttp 7912 9692 "GET /redoc/ HTTP/1.1" 200 14082
+INFO 2025-02-24 12:39:53,130 basehttp 7912 9692 "GET /redoc/?format=openapi HTTP/1.1" 200 3471
+INFO 2025-02-24 12:46:22,116 basehttp 7912 15176 "GET /redoc/ HTTP/1.1" 200 14081
+INFO 2025-02-24 12:46:22,128 basehttp 7912 15176 "GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,128 basehttp 7912 17248 "GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,130 basehttp 7912 17248 "GET /static/drf-yasg/redoc-init.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,130 basehttp 7912 15176 "GET /static/debug_toolbar/css/toolbar.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,132 basehttp 7912 17248 "GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,132 basehttp 7912 15176 "GET /static/debug_toolbar/js/toolbar.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,183 basehttp 7912 17248 "GET /static/debug_toolbar/css/print.css HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,184 basehttp 7912 17248 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
+INFO 2025-02-24 12:46:22,195 basehttp 7912 15176 "GET /redoc/?format=openapi HTTP/1.1" 200 3471
+INFO 2025-02-24 12:46:22,195 basehttp 7912 17248 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 304 0

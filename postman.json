@@ -1,0 +1,248 @@
+{
+    "info": {
+        "name": "SaaS API",
+        "description": "SaaS API Endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Auth",
+            "item": [
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}"
+                        },
+                        "url": "https://daphnetourmanager.pythonanywhere.com/auth/login/"
+                    }
+                },
+                {
+                    "name": "Token Refresh",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"refresh\": \"your_refresh_token\"\n}"
+                        },
+                        "url": "https://daphnetourmanager.pythonanywhere.com/auth/token/refresh/"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Companies",
+            "item": [
+                {
+                    "name": "List Companies",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/companies/"
+                    }
+                },
+                {
+                    "name": "Create Company",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"name\": \"Test Şirketi\",\n    \"company_type\": \"limited\",\n    \"tax_number\": \"1234567890\",\n    \"tax_office\": \"Test VD\",\n    \"phone\": \"+905555555555\",\n    \"email\": \"info@test.com\",\n    \"address\": \"Test Adresi\",\n    \"neighborhood\": 1\n}"
+                        },
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/companies/"
+                    }
+                },
+                {
+                    "name": "Get Company",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/companies/1/"
+                    }
+                },
+                {
+                    "name": "Company Statistics",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/companies/1/statistics/"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Branches",
+            "item": [
+                {
+                    "name": "List Branches",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/branches/"
+                    }
+                },
+                {
+                    "name": "Create Branch",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"company\": 1,\n    \"name\": \"Test Şubesi\",\n    \"phone\": \"+905555555555\",\n    \"email\": \"sube@test.com\",\n    \"address\": \"Şube Adresi\",\n    \"neighborhood\": 1,\n    \"is_main_branch\": false\n}"
+                        },
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/branches/"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Employees",
+            "item": [
+                {
+                    "name": "List Employees",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/employees/"
+                    }
+                },
+                {
+                    "name": "Create Employee",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            },
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"user\": 1,\n    \"branch\": 1,\n    \"identity_number\": \"12345678901\",\n    \"birth_date\": \"1990-01-01\",\n    \"gender\": \"M\",\n    \"phone\": \"+905555555555\",\n    \"address\": \"Çalışan Adresi\",\n    \"neighborhood\": 1,\n    \"hire_date\": \"2024-01-01\",\n    \"role\": \"employee\"\n}"
+                        },
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/employees/"
+                    }
+                },
+                {
+                    "name": "Employee Statistics",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/employees/statistics/"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Locations",
+            "item": [
+                {
+                    "name": "List Cities",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/cities/"
+                    }
+                },
+                {
+                    "name": "List Districts",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/districts/"
+                    }
+                },
+                {
+                    "name": "List Neighborhoods",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Authorization",
+                                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQwMzg5NjAxLCJpYXQiOjE3NDAzODYwMDEsImp0aSI6ImQxZTMyZDhkNWU4ODQ0ZWI5OWRmY2Y3Y2Y2ODM3OThkIiwidXNlcl9pZCI6MX0.IJgWKnbzNIpWxGf8HCpv-KhUCbPwaPLUBI4XqLKYIGE"
+                            }
+                        ],
+                        "url": "https://daphnetourmanager.pythonanywhere.com/api/v1/neighborhoods/"
+                    }
+                }
+            ]
+        }
+    ]
+}
