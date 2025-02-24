@@ -218,6 +218,11 @@ class CompanyViewSet(BaseViewSet):
     Şirket denetim kayıtlarını listeler.
     * Tüm değişiklik geçmişi
     * Kullanıcı ve IP bilgileri
+    
+    register:
+    Yeni şirket kaydı oluşturur (token gerektirmez).
+    * Otomatik olarak merkez şube oluşturulur
+    * 30 günlük deneme planı atanır
     """
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
@@ -303,6 +308,44 @@ class CompanyViewSet(BaseViewSet):
         )
         serializer = AuditLogSerializer(page, many=True)
         return self.get_paginated_response(serializer.data)
+
+    def get_permissions(self):
+        """register action'ı için izin gerektirmez"""
+        if self.action == 'register':
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
+    @action(detail=False, methods=['post'], url_path='register')
+    def register(self, request):
+        """Token gerektirmeyen şirket kaydı"""
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        company = serializer.save()
+
+        # Merkez şube oluştur
+        Branch.objects.create(
+            company=company,
+            name=f"{company.name} Merkez Şube",
+            is_main_branch=True,
+            phone=company.phone,
+            email=company.email,
+            address=company.address,
+            neighborhood=company.neighborhood
+        )
+
+        # Deneme planı ata
+        trial_plan = Plan.objects.get(id=1)  # 30 günlük deneme planı
+        Subscription.objects.create(
+            company=company,
+            plan=trial_plan,
+            start_date=timezone.now(),
+            end_date=timezone.now() + timedelta(days=30),
+            status='active'
+        )
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 class BranchViewSet(viewsets.ModelViewSet):
     """
