@@ -1278,3 +1278,4 @@ INFO 2025-02-24 12:46:22,183 basehttp 7912 17248 "GET /static/debug_toolbar/css/
 INFO 2025-02-24 12:46:22,184 basehttp 7912 17248 "GET /static/debug_toolbar/js/utils.js HTTP/1.1" 304 0
 INFO 2025-02-24 12:46:22,195 basehttp 7912 15176 "GET /redoc/?format=openapi HTTP/1.1" 200 3471
 INFO 2025-02-24 12:46:22,195 basehttp 7912 17248 "GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 304 0
+INFO 2025-02-24 14:19:26,698 autoreload 25072 32244 Watching for file changes with StatReloader
