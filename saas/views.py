@@ -311,10 +311,17 @@ class CompanyViewSet(BaseViewSet):
             logger.info(f"Company created: {company.name}")
 
             try:
+                # Merkez şube adını benzersiz yap
+                branch_name = f"{company.name} Merkez"
+                counter = 1
+                while Branch.objects.filter(company=company, name=branch_name).exists():
+                    branch_name = f"{company.name} Merkez {counter}"
+                    counter += 1
+
                 # Merkez şube oluştur
                 branch = Branch.objects.create(
                     company=company,
-                    name=f"{company.name} Merkez Şube",
+                    name=branch_name,
                     is_main_branch=True,
                     phone=company.phone,
                     email=company.email,

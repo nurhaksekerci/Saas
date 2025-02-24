@@ -225,8 +225,7 @@ class Branch(BaseModel):
         verbose_name_plural = 'Şubeler'
         ordering = ['company', 'name']
         unique_together = [
-            ['company', 'name'],
-            ['company', 'slug']  # Aynı şirkette aynı slug olamaz
+            ['company', 'slug']  # name kısıtlamasını kaldır
         ]
     
     def __str__(self):
