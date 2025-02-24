@@ -1327,3 +1327,12 @@ INFO 2025-02-24 14:25:25,627 autoreload 20816 25608 C:\Users\nurha\OneDrive\Masa
 INFO 2025-02-24 14:25:26,454 autoreload 28204 24120 Watching for file changes with StatReloader
 INFO 2025-02-24 14:34:46,825 autoreload 28204 24120 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
 INFO 2025-02-24 14:34:47,479 autoreload 21928 20116 Watching for file changes with StatReloader
+WARNING 2025-02-24 14:36:45,409 log 21928 31280 Not Found: /
+WARNING 2025-02-24 14:36:45,410 basehttp 21928 31280 "GET / HTTP/1.1" 404 18371
+WARNING 2025-02-24 14:36:45,530 log 21928 31280 Not Found: /favicon.ico
+WARNING 2025-02-24 14:36:45,530 basehttp 21928 31280 "GET /favicon.ico HTTP/1.1" 404 18433
+INFO 2025-02-24 14:36:59,281 basehttp 21928 31280 "GET /api/v1/companies HTTP/1.1" 301 0
+WARNING 2025-02-24 14:36:59,302 log 21928 27844 Unauthorized: /api/v1/companies/
+WARNING 2025-02-24 14:36:59,303 basehttp 21928 27844 "GET /api/v1/companies/ HTTP/1.1" 401 18363
+INFO 2025-02-24 14:37:37,510 autoreload 21928 20116 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 14:37:38,205 autoreload 18084 26448 Watching for file changes with StatReloader

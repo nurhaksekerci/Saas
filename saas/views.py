@@ -183,41 +183,10 @@ class CompanyViewSet(BaseViewSet):
     Şirket yönetimi için API endpoint'leri.
     
     list:
-    Şirketleri listeler.
-    * Yetki: Authenticated
+    Şirketleri listeler (token gerektirmez).
     * Filtreleme: company_type, is_active
     * Arama: name, tax_number, email
     * Sıralama: name, created_at
-    
-    create:
-    Yeni şirket oluşturur.
-    * Otomatik olarak merkez şube oluşturulur
-    * 30 günlük deneme planı atanır
-    
-    retrieve:
-    Şirket detaylarını getirir.
-    * Şube bilgileri
-    * Çalışan sayıları
-    * Abonelik durumu
-    
-    update:
-    Şirket bilgilerini günceller.
-    * Audit log kaydı oluşturulur
-    
-    destroy:
-    Şirketi siler.
-    * İlişkili tüm kayıtlar silinir
-    
-    statistics:
-    Şirket istatistiklerini döndürür.
-    * Şube ve çalışan sayıları
-    * Abonelik bilgileri
-    * API kullanım istatistikleri
-    
-    audit_logs:
-    Şirket denetim kayıtlarını listeler.
-    * Tüm değişiklik geçmişi
-    * Kullanıcı ve IP bilgileri
     
     register:
     Yeni şirket kaydı oluşturur (token gerektirmez).
@@ -230,16 +199,19 @@ class CompanyViewSet(BaseViewSet):
     search_fields = ['name', 'tax_number', 'email']
     ordering_fields = ['name', 'created_at']
 
+    def get_permissions(self):
+        """list ve register için izin gerektirmez"""
+        if self.action in ['list', 'register']:
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAuthenticated]
+        return [permission() for permission in permission_classes]
+
     def get_queryset(self):
-        """Kullanıcının yetkisine göre şirketleri filtrele"""
-        queryset = super().get_queryset()
-        user = self.request.user
-        
-        if not user.is_superuser and not user.is_staff:
-            if hasattr(user, 'employee'):
-                return Company.objects.filter(id=user.employee.branch.company.id)
-            return Company.objects.none()
-        return queryset
+        """Sadece aktif şirketleri listele"""
+        if self.action == 'list' and not self.request.user.is_authenticated:
+            return Company.objects.filter(is_active=True)
+        return super().get_queryset()
 
     @action(detail=True, methods=['get'])
     def statistics(self, request, pk=None):
@@ -308,14 +280,6 @@ class CompanyViewSet(BaseViewSet):
         )
         serializer = AuditLogSerializer(page, many=True)
         return self.get_paginated_response(serializer.data)
-
-    def get_permissions(self):
-        """register action'ı için izin gerektirmez"""
-        if self.action == 'register':
-            permission_classes = [AllowAny]
-        else:
-            permission_classes = [IsAuthenticated]
-        return [permission() for permission in permission_classes]
 
     @action(detail=False, methods=['post'], url_path='register')
     def register(self, request):
