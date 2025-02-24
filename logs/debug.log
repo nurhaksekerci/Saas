@@ -1336,3 +1336,13 @@ WARNING 2025-02-24 14:36:59,302 log 21928 27844 Unauthorized: /api/v1/companies/
 WARNING 2025-02-24 14:36:59,303 basehttp 21928 27844 "GET /api/v1/companies/ HTTP/1.1" 401 18363
 INFO 2025-02-24 14:37:37,510 autoreload 21928 20116 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
 INFO 2025-02-24 14:37:38,205 autoreload 18084 26448 Watching for file changes with StatReloader
+WARNING 2025-02-24 14:37:54,778 log 18084 27148 Unauthorized: /api/v1/companies/register/
+INFO 2025-02-24 14:37:54,779 basehttp 18084 27148 - Broken pipe from ('127.0.0.1', 59929)
+WARNING 2025-02-24 14:37:59,440 log 18084 21316 Unauthorized: /api/v1/companies/register/
+INFO 2025-02-24 14:37:59,442 basehttp 18084 21316 - Broken pipe from ('127.0.0.1', 59930)
+WARNING 2025-02-24 14:38:04,569 log 18084 31212 Unauthorized: /api/v1/companies/register/
+WARNING 2025-02-24 14:38:04,570 basehttp 18084 31212 "GET /api/v1/companies/register/ HTTP/1.1" 401 145206
+INFO 2025-02-24 14:41:16,269 autoreload 18084 26448 C:\Users\nurha\OneDrive\Masaüstü\Saas\core\settings.py changed, reloading.
+INFO 2025-02-24 14:41:17,493 autoreload 28948 26532 Watching for file changes with StatReloader
+INFO 2025-02-24 14:43:51,660 autoreload 28948 26532 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
+INFO 2025-02-24 14:43:53,205 autoreload 19400 24652 Watching for file changes with StatReloader

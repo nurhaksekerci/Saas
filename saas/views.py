@@ -16,6 +16,7 @@ from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_cookie
 from django.utils.translation import gettext_lazy as _
 from django.contrib.contenttypes.models import ContentType
+import logging
 
 # Create your views here.
 
@@ -284,32 +285,58 @@ class CompanyViewSet(BaseViewSet):
     @action(detail=False, methods=['post'], url_path='register')
     def register(self, request):
         """Token gerektirmeyen şirket kaydı"""
-        serializer = self.get_serializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        company = serializer.save()
+        try:
+            # Gelen veriyi doğrula
+            serializer = self.get_serializer(data=request.data)
+            serializer.is_valid(raise_exception=True)
 
-        # Merkez şube oluştur
-        Branch.objects.create(
-            company=company,
-            name=f"{company.name} Merkez Şube",
-            is_main_branch=True,
-            phone=company.phone,
-            email=company.email,
-            address=company.address,
-            neighborhood=company.neighborhood
-        )
+            # Şirketi oluştur
+            company = serializer.save(is_active=True)
 
-        # Deneme planı ata
-        trial_plan = Plan.objects.get(id=1)  # 30 günlük deneme planı
-        Subscription.objects.create(
-            company=company,
-            plan=trial_plan,
-            start_date=timezone.now(),
-            end_date=timezone.now() + timedelta(days=30),
-            status='active'
-        )
+            # Merkez şube oluştur
+            branch = Branch.objects.create(
+                company=company,
+                name=f"{company.name} Merkez Şube",
+                is_main_branch=True,
+                phone=company.phone,
+                email=company.email,
+                address=company.address,
+                neighborhood=company.neighborhood
+            )
 
-        return Response(serializer.data, status=status.HTTP_201_CREATED)
+            # Deneme planı ata
+            try:
+                trial_plan = Plan.objects.get(id=1)  # 30 günlük deneme planı
+                Subscription.objects.create(
+                    company=company,
+                    plan=trial_plan,
+                    start_date=timezone.now(),
+                    end_date=timezone.now() + timedelta(days=30),
+                    status='active'
+                )
+            except Plan.DoesNotExist:
+                # Deneme planı bulunamazsa hata dönme, sadece loglama yap
+                logger.error("Trial plan (id=1) not found during company registration")
+
+            return Response({
+                'status': 'success',
+                'message': 'Şirket başarıyla oluşturuldu',
+                'data': serializer.data
+            }, status=status.HTTP_201_CREATED)
+
+        except serializers.ValidationError as e:
+            return Response({
+                'status': 'error',
+                'message': 'Validasyon hatası',
+                'errors': e.detail
+            }, status=status.HTTP_400_BAD_REQUEST)
+
+        except Exception as e:
+            logger.error(f"Error during company registration: {str(e)}")
+            return Response({
+                'status': 'error',
+                'message': 'Şirket oluşturulurken bir hata oluştu'
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class BranchViewSet(viewsets.ModelViewSet):
     """

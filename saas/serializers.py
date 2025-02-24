@@ -332,61 +332,34 @@ class CurrencySerializer(serializers.ModelSerializer):
 class CompanySerializer(serializers.ModelSerializer):
     """
     Şirket bilgilerini serialize eden sınıf.
-    Mahalle bilgisini hem ID hem de tam adres olarak içerir.
     """
-    neighborhood_full_name = serializers.CharField(
-        source='neighborhood.__str__', 
-        read_only=True
-    )
-    company_type_display = serializers.CharField(
-        source='get_company_type_display',
-        read_only=True
-    )
-    district_name = serializers.CharField(
-        source='neighborhood.district.name',
-        read_only=True
-    )
-    city_name = serializers.CharField(
-        source='neighborhood.district.city.name',
-        read_only=True
-    )
-    full_address = serializers.SerializerMethodField()
-    total_branches = serializers.SerializerMethodField()
-    total_employees = serializers.SerializerMethodField()
-    active_employees = serializers.SerializerMethodField()
-
     class Meta:
         model = Company
         fields = (
-            'id', 'name', 'company_type', 'company_type_display', 'slug',
-            'tax_number', 'tax_office', 'phone', 'email', 'address',
-            'neighborhood', 'neighborhood_full_name', 'district_name', 
-            'city_name', 'full_address', 'total_branches', 'total_employees',
-            'active_employees', 'is_active', 'created_at', 'updated_at'
+            'id', 'name', 'company_type', 'tax_number', 'tax_office',
+            'phone', 'email', 'address', 'neighborhood', 'is_active'
         )
-        read_only_fields = ('slug',)
+        read_only_fields = ('id', 'is_active')
 
-    def get_full_address(self, obj):
-        """Tam adres bilgisini döndürür"""
-        if obj.neighborhood and obj.neighborhood.district and obj.neighborhood.district.city:
-            return f"{obj.address}, {obj.neighborhood.name} Mah., {obj.neighborhood.district.name}/{obj.neighborhood.district.city.name}"
-        return obj.address
+    def validate(self, data):
+        """Özel validasyon kuralları"""
+        # Vergi numarası kontrolü
+        if 'tax_number' in data:
+            if not data['tax_number'].isdigit() or len(data['tax_number']) != 10:
+                raise serializers.ValidationError({
+                    'tax_number': 'Vergi numarası 10 haneli sayı olmalıdır.'
+                })
 
-    def get_total_branches(self, obj):
-        """Toplam şube sayısını döndürür"""
-        return obj.branches.count()
+        # Telefon format kontrolü
+        if 'phone' in data:
+            phone = ''.join(filter(str.isdigit, data['phone']))
+            if len(phone) != 10:
+                raise serializers.ValidationError({
+                    'phone': 'Telefon numarası 10 haneli olmalıdır.'
+                })
+            data['phone'] = f"0{phone}"  # Standardize format
 
-    def get_total_employees(self, obj):
-        """Toplam çalışan sayısını döndürür"""
-        return Employee.objects.filter(branch__company=obj).count()
-
-    def get_active_employees(self, obj):
-        """Aktif çalışan sayısını döndürür"""
-        return Employee.objects.filter(
-            branch__company=obj,
-            is_active=True,
-            termination_date__isnull=True
-        ).count()
+        return data
 
 class BranchSerializer(serializers.ModelSerializer):
     """

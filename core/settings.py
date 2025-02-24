@@ -53,10 +53,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # En üstte olmalı
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  # CORS için
-    'django.middleware.locale.LocaleMiddleware',  # Çoklu dil desteği
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -201,11 +200,33 @@ SIMPLE_JWT = {
 }
 
 # CORS settings
-CORS_ALLOW_ALL_ORIGINS = DEBUG  # Geliştirme ortamı için
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React frontend
-    "http://127.0.0.1:3000",
+CORS_ALLOW_ALL_ORIGINS = True  # Tüm originlere izin ver
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
 ]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
+CORS_EXPOSE_HEADERS = ['*']  # Tüm headerları expose et
+CORS_ALLOW_CREDENTIALS = True  # Credentials'a izin ver
+
+# CORS_ALLOWED_ORIGINS listesine gerek yok çünkü CORS_ALLOW_ALL_ORIGINS = True
 
 # Debug Toolbar ayarları
 if DEBUG:
