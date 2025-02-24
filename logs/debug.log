@@ -1351,3 +1351,6 @@ INFO 2025-02-24 14:47:50,047 autoreload 25812 17112 Watching for file changes wi
 INFO 2025-02-24 14:48:18,849 autoreload 25812 17112 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\views.py changed, reloading.
 INFO 2025-02-24 14:48:19,716 autoreload 27320 23720 Watching for file changes with StatReloader
 INFO 2025-02-24 14:51:23,649 autoreload 22116 11784 Watching for file changes with StatReloader
+INFO 2025-02-24 14:53:27,127 autoreload 22116 11784 C:\Users\nurha\OneDrive\Masaüstü\Saas\saas\models.py changed, reloading.
+INFO 2025-02-24 14:53:27,959 autoreload 29932 23416 Watching for file changes with StatReloader
+INFO 2025-02-24 14:53:43,854 autoreload 9544 33136 Watching for file changes with StatReloader

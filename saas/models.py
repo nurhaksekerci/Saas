@@ -174,9 +174,7 @@ class Company(BaseModel):
                     plan=trial_plan,
                     status='active',
                     start_date=timezone.now().date(),
-                    end_date=timezone.now().date() + timedelta(days=30),
-                    is_trial=True,
-                    trial_ends=timezone.now().date() + timedelta(days=30)
+                    end_date=timezone.now().date() + timedelta(days=30)
                 )
             except Plan.DoesNotExist:
                 # Plan bulunamazsa log kaydı oluştur

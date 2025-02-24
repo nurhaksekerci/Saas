@@ -311,17 +311,10 @@ class CompanyViewSet(BaseViewSet):
             logger.info(f"Company created: {company.name}")
 
             try:
-                # Merkez şube adını benzersiz yap
-                branch_name = f"{company.name} Merkez"
-                counter = 1
-                while Branch.objects.filter(company=company, name=branch_name).exists():
-                    branch_name = f"{company.name} Merkez {counter}"
-                    counter += 1
-
                 # Merkez şube oluştur
                 branch = Branch.objects.create(
                     company=company,
-                    name=branch_name,
+                    name=f"{company.name} Merkez",
                     is_main_branch=True,
                     phone=company.phone,
                     email=company.email,
@@ -335,9 +328,9 @@ class CompanyViewSet(BaseViewSet):
                 subscription = Subscription.objects.create(
                     company=company,
                     plan=trial_plan,
+                    status='active',
                     start_date=timezone.now(),
-                    end_date=timezone.now() + timedelta(days=30),
-                    status='active'
+                    end_date=timezone.now() + timedelta(days=30)
                 )
                 logger.info(f"Trial subscription created for company: {company.name}")
 
