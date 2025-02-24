@@ -38,6 +38,7 @@ class LoginView(APIView):
 class CityViewSet(viewsets.ModelViewSet):
     """
     İl yönetimi için API endpoint'leri.
+    Token gerektirmez.
 
     list:
     İlleri listeler.
@@ -45,30 +46,30 @@ class CityViewSet(viewsets.ModelViewSet):
     * Arama: name, code
     * Sıralama: name, code
 
-    create:
-    Yeni il oluşturur.
-    * Gerekli alanlar: name, code
-
     retrieve:
     İl detaylarını getirir.
-
-    update:
-    İl bilgilerini günceller.
-
-    destroy:
-    İli siler.
     """
     queryset = City.objects.all()
     serializer_class = CitySerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]  # Token gerektirmez
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    pagination_class = None  # Sayfalama yok
     filterset_fields = ['is_active']
     search_fields = ['name', 'code']
     ordering_fields = ['name', 'code']
 
+    def get_permissions(self):
+        """GET metodları için izin gerektirmez, diğerleri için admin gerekir"""
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAdminUser]
+        return [permission() for permission in permission_classes]
+
 class DistrictViewSet(viewsets.ModelViewSet):
     """
     İlçe yönetimi için API endpoint'leri.
+    Token gerektirmez.
 
     list:
     İlçeleri listeler.
@@ -76,26 +77,25 @@ class DistrictViewSet(viewsets.ModelViewSet):
     * Arama: name, city__name
     * Sıralama: name, city__name
 
-    create:
-    Yeni ilçe oluşturur.
-    * Gerekli alanlar: name, city
-
     retrieve:
     İlçe detaylarını getirir.
-
-    update:
-    İlçe bilgilerini günceller.
-
-    destroy:
-    İlçeyi siler.
     """
     queryset = District.objects.all()
     serializer_class = DistrictSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]  # Token gerektirmez
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    pagination_class = None  # Sayfalama yok
     filterset_fields = ['city', 'is_active']
     search_fields = ['name', 'city__name']
     ordering_fields = ['name', 'city__name']
+
+    def get_permissions(self):
+        """GET metodları için izin gerektirmez, diğerleri için admin gerekir"""
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAdminUser]
+        return [permission() for permission in permission_classes]
 
     def get_queryset(self):
         queryset = super().get_queryset()
@@ -105,13 +105,35 @@ class DistrictViewSet(viewsets.ModelViewSet):
         return queryset
 
 class NeighborhoodViewSet(viewsets.ModelViewSet):
+    """
+    Mahalle yönetimi için API endpoint'leri.
+    Token gerektirmez.
+
+    list:
+    Mahalleleri listeler.
+    * Filtreleme: district, district__city, is_active
+    * Arama: name, postal_code, district__name
+    * Sıralama: name, postal_code
+
+    retrieve:
+    Mahalle detaylarını getirir.
+    """
     queryset = Neighborhood.objects.all()
     serializer_class = NeighborhoodSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]  # Token gerektirmez
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    pagination_class = None  # Sayfalama yok
     filterset_fields = ['district', 'district__city', 'is_active']
     search_fields = ['name', 'postal_code', 'district__name', 'district__city__name']
     ordering_fields = ['name', 'postal_code']
+
+    def get_permissions(self):
+        """GET metodları için izin gerektirmez, diğerleri için admin gerekir"""
+        if self.action in ['list', 'retrieve']:
+            permission_classes = [AllowAny]
+        else:
+            permission_classes = [IsAdminUser]
+        return [permission() for permission in permission_classes]
 
 # Şirket ve Şube ViewSet'leri
 class BaseViewSet(viewsets.ModelViewSet):
